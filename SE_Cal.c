@@ -28,11 +28,15 @@ static struct obj_2D3D_t outer =
 static void check_array_valid(struct obj_2D3D_t *a);
 static void check_array_valid(struct obj_2D3D_t *a)
 {
-    unsigned char cut_id = 0x00U; 
+    unsigned char check_id = 0x00U;
+    unsigned char cur_array = a->array_1;
     if(a->type == STRUCT_TYPE_2D)
     {
-cut
-        if(a->array_1)
+Check_2D_1_laber:
+        if(cur_array == CIRCLE)
+        {
+
+        }
     }
     else if(a->type == STRUCT_TYPE_3D)
     {
