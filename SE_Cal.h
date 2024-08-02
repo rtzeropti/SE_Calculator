@@ -1,7 +1,7 @@
 #ifndef SE_CAL_H
 #define SE_CAL_H
 
-type enum
+typedef enum
 {
     CIRCLE      = 0x01, //Varry from 0 to 1
     TRIANGLE    = 0x03,
@@ -9,7 +9,7 @@ type enum
     ERROR2D     = 0x05
 }obj_2D_type;
 
-type enum
+typedef enum
 {
     CC          = 0x02,
     CT          = 0x04,
@@ -19,5 +19,14 @@ type enum
     SS          = 0x08,
     ER          = 0x09
 }obj_3D_type;
+
+tydedef struct
+{
+    unsigned char array[3];
+    unsigned char flag;
+    unsigned char temp_array[3];
+    unsigned char reserved:7;
+    unsigned char type:1;
+}obj_2D3D_t;
 
 #endif
