@@ -39,20 +39,20 @@ Check_2D_1_laber:
         {
             flag &= 0;
             check_id |= CHECK_1;
-            if(check_id == (CHECK_1 | CHECK_2 | CHECK_3)
+            temp = check_id;
+            if(temp == (CHECK_1 | CHECK_2 | CHECK_3)
             {
                 return SUCCESS;
             }
-            temp = check_id;
         }
         else
         {
             flag |= CHECK_1;
-            if(flag == (CHECK_1 | CHECK_2 | CHECK_3))
+            temp = flag;
+            if(temp == (CHECK_1 | CHECK_2 | CHECK_3))
             {
                 return FAIL;
             }
-            temp = flag;
         }
         if(temp & CHECK_2)
         {
@@ -68,20 +68,20 @@ Check_2D_2_laber:
         {
             flag &= 0;
             check_id |= CHECK_2;
-            if(check_id == (CHECK_1 | CHECK_2 | CHECK_3)
+            temp = check_id;
+            if(temp == (CHECK_1 | CHECK_2 | CHECK_3)
             {
                 return SUCCESS;
             }
-            temp = check_id;
         }
         else
         {
             flag |= CHECK_2;
-            if(flag == (CHECK_1 | CHECK_2 | CHECK_3))
+            temp = flag;
+            if(temp == (CHECK_1 | CHECK_2 | CHECK_3))
             {
                 return FAIL;
             }
-            temp = flag;
         }
         if(temp & CHECK_1)
         {
