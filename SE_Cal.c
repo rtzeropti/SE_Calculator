@@ -147,6 +147,8 @@ Check_2D_3_laber:
     }
     else if(a->type == STRUCT_TYPE_3D)
     {
+Check_3D_1_laber:
+        temp = 0;
         
     }
 }
