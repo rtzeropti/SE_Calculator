@@ -1,6 +1,9 @@
 #ifndef SE_CAL_H
 #define SE_CAL_H
 
+#define STRUCT_TYPE_2D 0
+#define STRUCT_TYPE_3D 1
+
 typedef enum
 {
     CIRCLE      = 0x01, //Varry from 0 to 1
@@ -22,9 +25,13 @@ typedef enum
 
 tydedef struct
 {
-    unsigned char array[3];
+    unsigned char array_1;
+    unsigned char array_2;
+    unsigned char array_3;
     unsigned char flag;
-    unsigned char temp_array[3];
+    unsigned char temp_array_1;
+    unsigned char temp_array_2;
+    unsigned char temp_array_3;
     unsigned char reserved:7;
     unsigned char type:1;
 }obj_2D3D_t;
