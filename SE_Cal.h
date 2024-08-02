@@ -21,6 +21,11 @@ typedef enum
     ERROR2D     = 0x05
 }obj_2D_type;
 
+#define uc_CIRCLE       (unsigned char)CIRCLE
+#define uc_TRIANGLE     (unsigned char)TRIANGLE
+#define uc_SQUARE       (unsigned char)SQUARE
+#define uc_ERROR2D      (unsigned char)ERROR2D
+
 typedef enum
 {
     CC          = 0x11,
@@ -32,8 +37,19 @@ typedef enum
     TC          = 0x31,//This should be converted to CT
     SC          = 0x41,//This should be converted to CS
     ST          = 0x43,//This should be converted to TS
-    ER          = 0x45
+    ER3D        = 0x45
 }obj_3D_type;
+
+#define uc_CC           (unsigned char)CC
+#define uc_CT           (unsigned char)CT
+#define uc_CS           (unsigned char)CS
+#define uc_TT           (unsigned char)TT
+#define uc_TS           (unsigned char)TS
+#define uc_SS           (unsigned char)SS
+#define uc_TC           (unsigned char)TC
+#define uc_SC           (unsigned char)SC
+#define uc_ST           (unsigned char)ST
+#define uc_ER3D         (unsigned char)ER3D
 
 tydedef struct
 {
