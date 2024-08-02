@@ -4,6 +4,15 @@
 #define STRUCT_TYPE_2D 0
 #define STRUCT_TYPE_3D 1
 
+#define CHECK_1 0x01
+#define CHECK_2 0x02
+#define CHECK_3 0x04
+#define CHECK_4 0x08
+#define CHECK_5 0x10
+#define CHECK_6 0x20
+#define CHECK_7 0x40
+#define CHECK_8 0x80
+
 typedef enum
 {
     CIRCLE      = 0x01, //Varry from 0 to 1
