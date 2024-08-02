@@ -35,7 +35,7 @@ static unsigned char check_array_valid(struct obj_2D3D_t *a)
     {
 Check_2D_1_laber:
         temp = 0;
-        if(cur_array == CIRCLE)
+        if(cur_array == uc_CIRCLE)
         {
             flag &= 0;
             check_id |= CHECK_1;
@@ -46,7 +46,11 @@ Check_2D_1_laber:
             }
             else if(temp & CHECK_2)
             {
-                
+                cur_array = array_3;
+            }
+            else
+            {
+                cur_array = array_2;
             }
         }
         else
@@ -68,7 +72,7 @@ Check_2D_1_laber:
         }
 Check_2D_2_laber:
         temp = 0;
-        if(cur_array == CIRCLE)
+        if(cur_array == uc_TRIANGLE)
         {
             flag &= 0;
             check_id |= CHECK_2;
@@ -76,6 +80,14 @@ Check_2D_2_laber:
             if(temp == (CHECK_1 | CHECK_2 | CHECK_3)
             {
                 return SUCCESS;
+            }
+            else if(temp & CHECK_1)
+            {
+                cur_array = array_3;
+            }
+            else
+            {
+                cur_array = array_1;
             }
         }
         else
@@ -97,7 +109,7 @@ Check_2D_2_laber:
         }
 Check_2D_3_laber:
         temp = 0;
-        if(cur_array == CIRCLE)
+        if(cur_array == uc_SQUARE)
         {
             flag &= 0;
             check_id |= CHECK_3;
@@ -105,6 +117,14 @@ Check_2D_3_laber:
             if(temp == (CHECK_1 | CHECK_2 | CHECK_3)
             {
                 return SUCCESS;
+            }
+            else if(temp & CHECK_2)
+            {
+                cur_array = array_1;
+            }
+            else
+            {
+                cur_array = array_2;
             }
         }
         else
