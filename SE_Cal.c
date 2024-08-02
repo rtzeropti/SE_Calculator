@@ -3,26 +3,26 @@
 static struct obj_2D3D_t inner = 
 {
     .type = STRUCT_TYPE_2D,
-    .array_1 = (unsigned char)CIRCLE,
-    .array_2 = (unsigned char)TRIANGLE,
-    .array_3 = (unsigned char)SQUARE,
+    .array_1 = uc_CIRCLE,
+    .array_2 = uc_TRIANGLE,
+    .array_3 = uc_SQUARE,
     .flag = 0,
     .reserved = 0,
-    .temp_array_1 = (unsigned char)CIRCLE,
-    .temp_array_2 = (unsigned char)TRIANGLE,
-    .temp_array_3 = (unsigned char)SQUARE,
+    .temp_array_1 = uc_CIRCLE,
+    .temp_array_2 = uc_TRIANGLE,
+    .temp_array_3 = uc_SQUARE,
 };
 static struct obj_2D3D_t outer = 
 {
     .type = STRUCT_TYPE_3D,
-    .array_1 = (unsigned char)CC,
-    .array_2 = (unsigned char)TT,
-    .array_3 = (unsigned char)SS,
+    .array_1 = uc_CC,
+    .array_2 = uc_TT,
+    .array_3 = uc_SS,
     .flag = 0,
     .reserved = 0,
-    .temp_array_1 = (unsigned char)CT,
-    .temp_array_2 = (unsigned char)CS,
-    .temp_array_3 = (unsigned char)TS,
+    .temp_array_1 = uc_CT,
+    .temp_array_2 = uc_CS,
+    .temp_array_3 = uc_TS,
 };
 
 static unsigned char check_array_valid(struct obj_2D3D_t *a);
