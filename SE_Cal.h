@@ -23,13 +23,16 @@ typedef enum
 
 typedef enum
 {
-    CC          = 0x02,
-    CT          = 0x04,
-    CS          = 0x05,
-    TT          = 0x06,
-    TS          = 0x07,
-    SS          = 0x08,
-    ER          = 0x09
+    CC          = 0x11,
+    CT          = 0x13,
+    CS          = 0x14,
+    TT          = 0x33,
+    TS          = 0x34,
+    SS          = 0x44,
+    TC          = 0x31,//This should be converted to CT
+    SC          = 0x41,//This should be converted to CS
+    ST          = 0x43,//This should be converted to TS
+    ER          = 0x45
 }obj_3D_type;
 
 tydedef struct
