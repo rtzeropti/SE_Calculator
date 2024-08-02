@@ -44,6 +44,10 @@ Check_2D_1_laber:
             {
                 return SUCCESS;
             }
+            else if(temp & CHECK_2)
+            {
+                
+            }
         }
         else
         {
