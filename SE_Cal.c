@@ -28,9 +28,11 @@ static struct obj_2D3D_t outer =
 static void check_array_valid(struct obj_2D3D_t *a);
 static void check_array_valid(struct obj_2D3D_t *a)
 {
+    unsigned char cut_id = 0x00U; 
     if(a->type == STRUCT_TYPE_2D)
     {
-        
+cut
+        if(a->array_1)
     }
     else if(a->type == STRUCT_TYPE_3D)
     {
