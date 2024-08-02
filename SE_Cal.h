@@ -1,6 +1,9 @@
 #ifndef SE_CAL_H
 #define SE_CAL_H
 
+#define SUCCESS 0x80
+#define FAIL    0x40
+
 #define STRUCT_TYPE_2D 0
 #define STRUCT_TYPE_3D 1
 
@@ -51,8 +54,7 @@ typedef enum
 #define uc_ST           (unsigned char)ST
 #define uc_ER3D         (unsigned char)ER3D
 
-tydedef struct
-{
+typedef struct{
     unsigned char array_1;
     unsigned char array_2;
     unsigned char array_3;
@@ -63,5 +65,53 @@ tydedef struct
     unsigned char reserved:7;
     unsigned char type:1;
 }obj_2D3D_t;
+
+#define sort_3_low_to_high(a,b,c)   do{                                 \
+                                        if((a) > (b))                   \
+                                        {                               \
+                                            swap_a_b(&(a),&(b));        \
+                                            if((b) > (c))               \
+                                            {                           \
+                                                swap_a_b(&(b),&(c));    \
+                                            }                           \
+                                        }                               \
+                                        if((a) > (b))                   \
+                                        {                               \
+                                            swap_a_b(&(a),&(b));        \
+                                        }                               \
+                                        if((b) > (c))                   \
+                                        {                               \
+                                            swap_a_b(&(b),&(c));        \
+                                            if((a) > (b))               \
+                                            {                           \
+                                                swap_a_b(&(a),&(b));    \
+                                            }                           \
+                                        }                               \
+                                    }while(0)
+
+#define sort_3_low_to_high2(a,b,c)  do{                                 \
+                                        if((a) > (b))                   \
+                                        {                               \
+                                            if((a) > (c))               \
+                                            {                           \
+                                                swap_a_b(&(a),&(c));    \
+                                            }                           \
+                                            if((a) > (b))               \
+                                            {                           \
+                                                swap_a_b(&(a),&(b));    \
+                                            }                           \
+                                        }                               \
+                                        if((b) > (c))                   \
+                                        {                               \
+                                            swap_a_b(&(b),&(c));        \
+                                            if((a) > (b))               \
+                                            {                           \
+                                                swap_a_b(&(a),&(b));    \
+                                            }                           \
+                                        }                               \
+                                    }while(0)
+
+void swap_a_b(unsigned char *a,unsigned char *b);
+unsigned char obj_2D3D_init(obj_2D3D_t *a, unsigned char a1, unsigned char a2, unsigned char a3, unsigned char type);
 
 #endif
