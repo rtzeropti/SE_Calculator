@@ -6,7 +6,7 @@ type enum
     CIRCLE      = 0x01, //Varry from 0 to 1
     TRIANGLE    = 0x03,
     SQUARE      = 0x04,
-    Error       = 0x05
+    ERROR2D     = 0x05
 }obj_2D_type;
 
 type enum
